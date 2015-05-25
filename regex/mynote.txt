@@ -1,0 +1,82 @@
+==CHARACTER==
+.  - any character but line break
+\w - any character a-z 0-9 _
+\W - anything but a char
+\d - any number
+\D - anything but a numbe
+----
+\p{L} matches a single code point in the category "letter".
+\p{N} matches any kind of numeric character in any script
+
+==SPACE==
+\s - any space
+\S - anything but a Space
+\e - white space / Escape
+\f - Form feed
+\n - Newline
+\r - Carriage Return
+\t - tab
+
+==POSITION====BASIC MATCHES==
+\A or ^  - begin with
+\z or $  - end of string
+^and$ = entire string
+----
+\b - space between a character / word boundery / end of word
+\B - not a word boundery
+
+==LENGTH==
+?  - 0 or 1 repetitions
+*  - 0 or more repetition
++ - one or more 
+{n} - specify number of character
+{n,n} - beteween number of character
+{n,} - specify minimum number of character
+
+==CONDITION==
+
+--DEFINE--
+[ae] - any deffine character
+[0-9] = any number
+[a-z] = any lowercase letter
+[A-Z] = any uppercase letter
+[\f\t\r\n] = whitespace
+[^0-9] = not any number
+[A-Fa-t0-4 ]
+
+--logical--
+| - or
+[^c|h|a|r] - exept character
+(?=[]?[])- valid if
+(?! ) - not equal
+(?<= ) - if equal
+(?: ) non capturing
+
+==FUNCTION==
+\1 - redo ()
+
+==GROUPING==
+() output only inside
+
+==WITH BACK SLASH==
+# . ^ $ * + ? {} [] \ | ()
+
+--DELIMETER----------------------------------------------
+/ @ # `~ % & ' "
+
+--DELIMETER CASE-----------------------------------------
+(delimeter)i - case insensitive
+
+--APPLICATION--------------------------------------------
+http://regexr.com/
+
+--SAMPLE CHARACTER---------------------------------------
+http://lipsum.com/feed/html
+
+
+==PROGRAMMING LANGUAGE==
+
+--JAVASCRIPT---------------------------------------
+if(string.match(/[0-5]/)){
+	console.log('String matches!');
+}
